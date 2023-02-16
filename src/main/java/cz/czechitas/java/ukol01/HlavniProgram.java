@@ -7,6 +7,7 @@ public class HlavniProgram {
     public void start() {
         Turtle zofka = new Turtle();
 
+    /*
         nakresliPrasatko(zofka);
 
         // posunutí doprava k nakreslení osmiúhelníku
@@ -30,9 +31,42 @@ public class HlavniProgram {
         zofka.penDown();
 
         nakresliSlunicko(zofka);
+        */
+
+
+        //posun na kraj
+        zofka.turnLeft(90);
+        zofka.penUp();
+        zofka.move(500);
+        zofka.penDown();
+        zofka.turnRight(90);
+
+        nakresliCtverec(zofka);
+
+        zofka.turnLeft(90);
+
+        nakresliStrechu(zofka);
+
+        zofka.turnLeft(150);
+        zofka.penUp();
+        zofka.move(100);
+        zofka.turnLeft(90);
+        zofka.move(100);
+        zofka.turnRight(190);
+        zofka.penDown();
+
+
 
 
     }
+
+    private static void nakresliStrechu(Turtle zofka) {
+        for (int i = 0; i < 2; i++) {
+            zofka.turnRight(120);
+            zofka.move(100);
+        }
+    }
+
 
     private static void nakresliSlunicko(Turtle zofka) {
         for (int i = 0; i < 12; i++) {
@@ -65,7 +99,7 @@ public class HlavniProgram {
     private static void nakresliPrasatko(Turtle zofka) {
         nakresliCtverec(zofka);
 
-        nakresliStrechu(zofka);
+        nakresliHlavu(zofka);
 
         zofka.turnRight(105);
 
@@ -93,7 +127,7 @@ public class HlavniProgram {
         zofka.move(30);
     }
 
-    private static void nakresliStrechu(Turtle zofka) {
+    private static void nakresliHlavu(Turtle zofka) {
         for (int i = 0; i < 2; i++) {
             zofka.turnLeft(120);
             zofka.move(100);
