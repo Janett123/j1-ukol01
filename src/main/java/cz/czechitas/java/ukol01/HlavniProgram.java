@@ -58,6 +58,8 @@ public class HlavniProgram {
 
 
 
+
+
     }
 
     private static void nakresliStrechu(Turtle zofka) {
