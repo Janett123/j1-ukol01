@@ -34,32 +34,43 @@ public class HlavniProgram {
         */
 
 
-        //posun na kraj
+        //posun na kraj a dolů
         zofka.turnLeft(90);
         zofka.penUp();
         zofka.move(500);
+        zofka.turnLeft(90);
+        zofka.move(200);
         zofka.penDown();
-        zofka.turnRight(90);
+        zofka.turnRight(180);
 
+        nakresliDomecek(zofka);
+
+        // posun nahoru
+        zofka.turnLeft(150);
+        zofka.penUp();
+        zofka.move(250);
+        zofka.turnLeft(90);
+        zofka.move(100);
+        zofka.turnRight(90);
+        zofka.penDown();
+
+        nakresliDomecek(zofka);
+
+
+
+
+
+
+
+
+    }
+
+    private static void nakresliDomecek(Turtle zofka) {
         nakresliCtverec(zofka);
 
         zofka.turnLeft(90);
 
         nakresliStrechu(zofka);
-
-        zofka.turnLeft(150);
-        zofka.penUp();
-        zofka.move(100);
-        zofka.turnLeft(90);
-        zofka.move(100);
-        zofka.turnRight(190);
-        zofka.penDown();
-
-
-
-
-
-
     }
 
     private static void nakresliStrechu(Turtle zofka) {
