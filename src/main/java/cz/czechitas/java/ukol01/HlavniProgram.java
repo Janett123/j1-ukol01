@@ -34,7 +34,7 @@ public class HlavniProgram {
         */
 
 
-        //posun na kraj a dolů
+        //posun na levý kraj a dolů
         zofka.turnLeft(90);
         zofka.penUp();
         zofka.move(500);
@@ -101,17 +101,155 @@ public class HlavniProgram {
         nakresliSlunicko(zofka);
 
         //kreslení písmen jména
+        //posun dolů ke kreslení písmene Ž
+        zofka.penUp();
+        zofka.move(20);
+        zofka.turnLeft(90);
+        zofka.move(720);
+        zofka.turnRight(90);
+        zofka.penDown();
 
+        nakresliZsHackem(zofka);
 
+        //posun pro kreslení A
+        zofka.turnRight(180);
+        zofka.penUp();
+        zofka.move(30);
+        zofka.turnLeft(135);
+        zofka.move(100);
+        zofka.turnRight(90);
+        zofka.move(120);
+        zofka.turnLeft(90);
 
+        nakresliA(zofka);
 
+        //posun dolů ke kreslení N
+        zofka.turnLeft(180);
+        zofka.penUp();
+        zofka.move(26);
+        zofka.turnLeft(90);
+        zofka.move(50);
+        zofka.turnLeft(90);
+        zofka.move(120);
+        zofka.penDown();
 
+        NakresliN(zofka);
 
+        //posun ke kreslení E
+        zofka.turnLeft(180);
+        zofka.penUp();
+        zofka.move(120);
+        zofka.turnLeft(90);
+        zofka.move(70);
+        zofka.penDown();
 
+        nakresliE(zofka);
 
+        // přesun na kreslení T
+        zofka.turnLeft(180);
+        zofka.penUp();
+        zofka.move(120);
+        zofka.penDown();
 
+        nakresliT(zofka);
 
+        //přesun na kreslení A
+        zofka.turnRight(90);
+        zofka.penUp();
+        zofka.move(120);
+        zofka.turnLeft(90);
+        zofka.move(50);
 
+        nakresliA(zofka);
+
+        //přesun žofky mimo kresbu
+        zofka.turnRight(90);
+        zofka.penUp();
+        zofka.move(50);
+        zofka.turnLeft(90);
+        zofka.move(100);
+
+    }
+
+    private static void nakresliT(Turtle zofka) {
+        zofka.turnLeft(90);
+        zofka.move(120);
+        zofka.turnLeft(90);
+        zofka.penUp();
+        zofka.move(50);
+        zofka.turnLeft(180);
+        zofka.penDown();
+        zofka.move(100);
+    }
+
+    private static void nakresliE(Turtle zofka) {
+        zofka.turnLeft(90);
+        zofka.move(120);
+        zofka.turnRight(90);
+        zofka.move(100);
+        zofka.turnLeft(180);
+
+        for (int i = 0; i < 2; i++) {
+            zofka.penUp();
+            zofka.move(100);
+            zofka.turnLeft(90);
+            zofka.move(60);
+            zofka.penDown();
+            zofka.turnLeft(90);
+            zofka.move(100);
+            zofka.turnLeft(180);
+        }
+    }
+
+    private static void NakresliN(Turtle zofka) {
+        zofka.turnLeft(90);
+        zofka.move(120);
+        zofka.turnRight(140);
+        zofka.move(156.2);
+        zofka.turnLeft(140);
+        zofka.move(120);
+    }
+
+    private static void nakresliA(Turtle zofka) {
+        zofka.turnLeft(67);
+        zofka.penDown();
+        zofka.move(130);
+        zofka.turnRight(134);
+        zofka.move(130);
+        zofka.turnRight(113);
+        zofka.penUp();
+
+        //kreslení čárky u A
+        zofka.move(50);
+        zofka.turnRight(90);
+        zofka.move(50);
+        zofka.turnLeft(90);
+        zofka.move(26);
+        zofka.turnLeft(180);
+        zofka.penDown();
+        zofka.move(52);
+    }
+
+    private static void nakresliZsHackem(Turtle zofka) {
+        zofka.move(100);
+        zofka.turnRight(130);
+        zofka.move(156.2);
+        zofka.turnLeft(130);
+        zofka.move(100);
+
+        //kreslení háčku
+        zofka.turnRight(180);
+        zofka.penUp();
+        zofka.move(50);
+        zofka.turnLeft(135);
+        zofka.penDown();
+        zofka.move(30);
+        zofka.turnRight(180);
+        zofka.penUp();
+        zofka.move(30);
+        zofka.turnLeft(90);
+        zofka.penDown();
+        zofka.move(30);
     }
 
     private static void nakresliDomecek(Turtle zofka) {
