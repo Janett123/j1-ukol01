@@ -100,6 +100,8 @@ public class HlavniProgram {
 
         nakresliSlunicko(zofka);
 
+        //kreslení písmen jména
+
 
 
 
